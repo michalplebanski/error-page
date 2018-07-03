@@ -1,0 +1,128 @@
+body, h1, h2, h3, h4, ul, p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 100%;
+	background: linear-gradient(to left, #f75d5d 50%, #b2ad27 50%);
+}
+
+main {
+	min-height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	overflow-x: hidden;
+	.header {
+		min-height: 20vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 2vw;
+		&__title {
+			max-width: 100%;
+			color: #fff;
+			font-size: 8vh;
+			text-transform: capitalize;
+			letter-spacing: 0.2vw;
+		}
+	}
+	.msg {
+		min-height: 70vh;
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0 6vw;
+		background-color: #fff;
+		&__title {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			&--sad-icon {
+				color: #b2ad27;
+				font-size: 13vh;
+			}
+			&--text {
+				margin: 1vh 0;
+				font-size: 5vh;
+				text-transform: capitalize;
+			}
+		}
+		&__content {
+			display: flex;
+			align-items: center;
+			margin: 5vh 0;
+			&--text {
+				color: #939090;
+				font-size: 2.5vh;
+			}
+		}
+		&__search {
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 6vh;
+			&--input {
+				height: 5.5vh;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				input {
+					height: 100%;
+					padding: 0 1vw;
+					color: #939090;
+					font-size: 2.5vh;
+				}
+				.magnifier {
+					height: 100%;
+					width: 4vw;
+					background-color: #000;
+					color: #fff;
+					font-size: 2vh;
+					cursor: pointer;
+					border: none;
+				}
+			}
+		}
+		&__button {
+			width: 100%;
+			display: flex;
+			justify-content: flex-start;
+			&--click {
+				min-height: 7vh;
+				min-width: 10vw;
+				padding: 1vh 1vw;
+				background-color: #f75d5d;
+				color: #fff;
+				font-size: 2.5vh;
+				cursor: pointer;
+				border: none; 
+				border-radius: 1vh;
+				transition: 0.3s ease-in-out;
+				&:hover {
+					background-color: #fff;
+					color: #f75d5d;
+					border: 0.1vh solid #f75d5d;
+				}
+			}
+		}
+	}
+}
