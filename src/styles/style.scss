@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body, h1, h2, h3, h4, ul, p {
 	margin: 0;
 	padding: 0;
@@ -14,6 +16,7 @@ a {
 body {
 	max-width: 100%;
 	background: linear-gradient(to left, #f75d5d 50%, #b2ad27 50%);
+	font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -42,7 +45,7 @@ main {
 	}
 	.msg {
 		min-height: 70vh;
-		width: 60%;
+		width: 65%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -81,19 +84,20 @@ main {
 			align-items: center;
 			margin-bottom: 6vh;
 			&--input {
-				height: 5.5vh;
+				height: 6.5vh;
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 				input {
 					height: 100%;
+					width: 20vw;
 					padding: 0 1vw;
 					color: #939090;
 					font-size: 2.5vh;
 				}
 				.magnifier {
 					height: 100%;
-					width: 4vw;
+					width: 5vw;
 					background-color: #000;
 					color: #fff;
 					font-size: 2vh;
@@ -123,6 +127,18 @@ main {
 					border: 0.1vh solid #f75d5d;
 				}
 			}
+		}
+	}
+	.footer {
+		min-height: 20vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 2vw;
+		p {
+			color: #fff;
+			font-size: 2.5vh;
 		}
 	}
 }
