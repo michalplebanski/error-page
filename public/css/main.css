@@ -7,10 +7,14 @@ a {
   text-decoration: none; }
 
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 body {
   max-width: 100%;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #f75d5d), color-stop(50%, #b2ad27));
+  background: -webkit-linear-gradient(right, #f75d5d 50%, #b2ad27 50%);
+  background: -o-linear-gradient(right, #f75d5d 50%, #b2ad27 50%);
   background: linear-gradient(to left, #f75d5d 50%, #b2ad27 50%);
   font-family: 'Montserrat', sans-serif; }
 
@@ -18,17 +22,31 @@ main {
   min-height: 100vh;
   width: 100vw;
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden; }
   main .header {
     min-height: 20vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 2vw; }
     main .header__title {
       max-width: 100%;
@@ -39,18 +57,37 @@ main {
   main .msg {
     min-height: 70vh;
     width: 65%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 6vw;
     background-color: #fff; }
     main .msg__title {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start; }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      margin-top: 4vh; }
       main .msg__title--sad-icon {
         color: #b2ad27;
         font-size: 13vh; }
@@ -59,32 +96,50 @@ main {
         font-size: 5vh;
         text-transform: capitalize; }
     main .msg__content {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       margin: 5vh 0; }
       main .msg__content--text {
         color: #939090;
         font-size: 2.5vh; }
     main .msg__search {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       margin-bottom: 6vh; }
       main .msg__search--input {
         height: 6.5vh;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: flex-start;
-        align-items: center; }
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
         main .msg__search--input input {
           height: 100%;
-          width: 20vw;
+          width: 45%;
           padding: 0 1vw;
           color: #939090;
-          font-size: 2.5vh; }
+          font-size: 2.5vh;
+          border: 0.1vh solid #939090; }
         main .msg__search--input .magnifier {
           height: 100%;
-          width: 5vw;
+          width: 10%;
           background-color: #000;
           color: #fff;
           font-size: 2vh;
@@ -92,18 +147,25 @@ main {
           border: none; }
     main .msg__button {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-start; }
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-bottom: 4vh; }
       main .msg__button--click {
         min-height: 7vh;
         min-width: 10vw;
-        padding: 1vh 1vw;
+        padding: 1vh 2.5vw;
         background-color: #f75d5d;
         color: #fff;
         font-size: 2.5vh;
         cursor: pointer;
         border: none;
         border-radius: 1vh;
+        -webkit-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out; }
         main .msg__button--click:hover {
           background-color: #fff;
@@ -112,10 +174,29 @@ main {
   main .footer {
     min-height: 20vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2vw; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 4vw; }
     main .footer p {
       color: #fff;
-      font-size: 2.5vh; }
+      font-size: 2.5vh;
+      text-align: center; }
+
+@media (max-width: 800px) {
+  main .msg {
+    width: 80%; }
+    main .msg input {
+      width: 55%; } }
+
+@media (max-width: 600px) {
+  main .msg input {
+    width: 65%; }
+  main .msg .magnifier {
+    min-width: 15%; } }

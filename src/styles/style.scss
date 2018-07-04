@@ -58,6 +58,7 @@ main {
 			flex-direction: column;
 			justify-content: center;
 			align-items: flex-start;
+			margin-top: 4vh;
 			&--sad-icon {
 				color: #b2ad27;
 				font-size: 13vh;
@@ -85,19 +86,21 @@ main {
 			margin-bottom: 6vh;
 			&--input {
 				height: 6.5vh;
+				width: 100%;
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
 				input {
 					height: 100%;
-					width: 20vw;
+					width: 45%;
 					padding: 0 1vw;
 					color: #939090;
 					font-size: 2.5vh;
+					border: 0.1vh solid #939090;
 				}
 				.magnifier {
 					height: 100%;
-					width: 5vw;
+					width: 10%;
 					background-color: #000;
 					color: #fff;
 					font-size: 2vh;
@@ -110,10 +113,11 @@ main {
 			width: 100%;
 			display: flex;
 			justify-content: flex-start;
+			margin-bottom: 4vh;
 			&--click {
 				min-height: 7vh;
 				min-width: 10vw;
-				padding: 1vh 1vw;
+				padding: 1vh 2.5vw;
 				background-color: #f75d5d;
 				color: #fff;
 				font-size: 2.5vh;
@@ -135,10 +139,35 @@ main {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 0 2vw;
+		padding: 0 4vw;
 		p {
 			color: #fff;
 			font-size: 2.5vh;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	main {
+		.msg {
+			width: 80%;
+			input {
+				width: 55%;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	main {
+		.msg {
+			input {
+				width: 65%;
+			}
+			.magnifier {
+				min-width: 15%;
+			}
 		}
 	}
 }
